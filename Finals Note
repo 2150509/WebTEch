@@ -1,0 +1,52 @@
+SSS or "Server Side Scripting" is a way of designing sites in a way where processes and users can be processed from the originating server. Server-side scripts provide an interface to the user and are used to limit access to proprietary data and help keep control of the script source code.
+
+Runs on a server, embedded in the site’s code
+    Designed to interact with back-end permanent storage, like databases, and process information from the server to access the database—like a direct line from user to database
+   Facilitates the transfer of data from server to browser, bringing pages to life in the browser, e.g., processing and then delivering a field that a user requests or submits in a form
+Runs on-call. When a webpage is “called up,” or when parts of pages are “posted back” to the server with AJAX, server-side scripts process and return data
+Powers functions in dynamic web applications, such as user validation, saving and retrieving data, and navigating between other pages
+Plays a big role in how a database is built from the ground up and managed afterwards—an example of how roles often overlap in all aspects of development
+Build application programming interfaces (APIs), which control what data and software a site shares with other apps
+
+
+PHP?
+    PHP or in recursive acronym Hypertext Preprocessor is an open source scripting language that is for web development and can be embedded in HTML.
+
+History
+PHP was created by Rasmus Lerdorf in the year 1994 and in the present time PHP is now produced by The PHP Development Team. Before, PHP stands for Personal Home Page but in present time it is already known for its recursive acronym Hypertext Preprocessor.
+
+   Server-side Scripting: Server-side scripting is the target field for PHP. PHP parser, web server, and a web browser are the three things to make it work. The users need to run the web server as long as it has a PHP that is already installed.
+  Command line Scripting: Running php does not require to use any server or browser. The only thing to use PHP without a browser and a server is the PHP Parser. It is a type of usage that is ideal for scripts.
+
+NODE.JS
+  Node.js is a Javascript free and open source cross-platform for server-side programming that allows users to build network applications quickly. Node.JS is a system that uses event-driven programming to build scalable applications and network programs. Node.js basically allows the developer to run JavaScript in the back end, away from the browser.
+
+History of Node.JS
+    Node.js was originally written in 2009 by Ryan Dahl by making use of Google's V8 VM, the same runtime environment for JavaScript that Google Chrome uses. The initial release supported only Linux and Mac OSX. Its development and maintenance was led by Dahl and later sponsored by Joyent
+  Node.js has become wildly popular, with coders everywhere using it to create APIs and build a new matrix of interoperability across the Internet. It is a runtime system for creating (mostly) server-side applications. It's best known as a popular means for JavaScript coders to build real-time Web APIs.
+
+In the database side, data gets queued through some kind of cache or message queuing infrastructure and digested by a separate database batch-write process, or computation intensive processing backend services, written in a better performing platform for such tasks. Similar behavior can be implemented with other languages/frameworks, but not on the same hardware, with the same high, maintained throughput.
+Node.JS Example
+
+// Call the console.log function.
+console.log("Webtek is Awesome!");
+
+Save the file, and execute it through Node.js:
+node webtek.js
+
+// Load the http module to create an http server.
+var http = require('http');
+
+// Configure our HTTP server to respond to all requests.
+var server = http.createServer(function (request, response) {
+response.writeHead(200, {"Content-Type": "text/plain"});
+response.end("Web Technology is Awesome!\n");
+});
+
+// Listen on port 8000, IP defaults to 127.0.0.1
+server.listen(8000);
+
+// Put a friendly message on the terminal
+console.log("Server running at http://127.0.0.1:8000/");
+You can run this by saving it in a file called "example-console.js" and running it with node example-console.js
+
