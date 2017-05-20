@@ -809,15 +809,15 @@
                     <li>Server-side scripts require their language's interpreter to be installed on the server, and produce the same output regardless of the client's browser, operating system, or other system details</li>
                     <br>
                     <li>Server-side scripting unlike client side scripting has access to databases which makes it more flexible and secure.</li>
-                    <li>Examples:  JSP, PHP, Node.js</li>
+                    <li>Examples: ASP, JSP, PHP, Perl</li>
                 </ul>
                 <p class="link"> Popular server side languages</p>
             </div>
             <nav>
-                <img onclick="showphp()"  class="new click" src="./files/Java_programming_language_logo.svg.png">
-                <img onclick="showphp()"  class="new1 click" src="./files/PHP-logo.svg.png">
-                <img onclick="shownode()" class="new1 click" src="./files/Node.js_logo.svg.png">|
-                <img class="new click "src="./files/OWASP_Logo.png"><a onclick="showasp()" class="click" id="wasp">OWASP</a>
+                <a onclick="showjava()" class="click" id="java"> JAVA </a>
+                <a onclick="showphp()" class="click" id="php"> PHP </a>
+                <a onclick="shownode()" class="click" id="node"> Node.js </a> |
+                <a onclick="showasp()" class="click" id="wasp">OWASP</a>
             </nav>
             <hr>
             <div id="java-scripts">
@@ -947,23 +947,59 @@
                         </li>
                     </ul>
                     <h3>Example Code</h3>
-                    <pre>
-                        &lt;!DOCTYPE HTML>
-                        &lt;html>
-                        &lt;head>
-                            &lt;title>Example&lt;/title>
-                        &lt;/head>
-                        &lt;body>
-                            &lt;?php echo "Hi, I'm a PHP script!"; ?>
-                        &lt;/body>
-                        &lt;/html>
-                    </pre>
+                    <p>
+						
+                        <code>&lt;!DOCTYPE HTML&gt;</code> <br>
+                        <code>&lt;html&gt;</code> <br>
+
+                        <code>&lt;head&gt;</code> <br>
+                            <code>&lt;title&gt;</code>Example<code>&lt;/title&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+
+                        <code>&lt;body&gt;</code> <br>
+
+                            <code>< ?php <br>
+                                            <code>echo "Hi, I'm a PHP script!";</code><br>
+                                        ?></code> <br>
+
+                        <code>&lt;/body&gt;</code> <br>
+
+                        <code>&lt;/html&gt;</code> <br>
+                    </p>
                     <h3>What can PHP do?</h3>
                     <ul>
                         <li>Anything. PHP is mainly focused on server-side scripting, so you can do anything any other CGI program can do, such as collect form data, generate dynamic page content, or send and receive cookies. But PHP can do much more.<br>
                         </li>
+						
                         <br>
                     </ul>
+					
+					<h3>Session Functions</h3>
+					<ul>
+						<li>session_abort = Discard session array changes and finish session</li>               
+						<li>session_cache_expire = Return current cache expire</li>
+						<li>session_cache_limiter = Get and/or set the current cache limiter</li>
+						<li>session_commit = Alias of session_write_close</li>
+						<li>session_set_save_handler = Sets user-level session storage functions</li>                
+						<li>session_start</li>
+						<li>session_status = Returns the current session status</li>
+						<li>session_unregister </li>
+						<li>session_unset = Free all session variables</li>
+						<li>session_write_close </li>
+					</ul>
+					
+					<h3>Super Globals</h3>
+					<ul>
+						<li>$_GLOBALS</li>               
+						<li>$_SERVER</li>
+						<li>$_GET</li>
+						<li>$_POST</li>
+						<li>$_FILES</li>
+						<li>$_COOKIE</li>
+						<li>$_SESSION</li>
+						<li>$_REQUEST</li>
+						<li>$_ENV</li>
+					</ul>
                 </div>
             </div>
             <div id="node-scripts">
