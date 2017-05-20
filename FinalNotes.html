@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Webtek Finals Notes</title>
+    </head>
+    <body>
+        <div class="PRELIMS">
+            <div class="title maven-font">
+              Finals
+                <div class="horizontal-bar"></div>
+            </div>
+            <div class="content-prelims">
+                   <!--start of notes-->
+                    <div class="content maven-font">
+                        <h1>Client-side Web Scripting</h1>
+                        <ul>
+                            <li>It refers to the classes or programs embedded in a website and executed at the client-side by the client's browser. These scripts can be embedded in HTML code or placed in a separate file and referred to by the document using it. On request, these files are sent to the user's browser where it gets executed and the appropriate content is displayed.</li>
+                            <li>In client-side scripting, the user is able to view the source code (as it is placed on the client's browser)</li>
+                            <li>Client-side scripts do not require additional software or an interpreter on the server; however, they require that the user's web browser understands the scripting language in which they are written. It is therefore important for the developer to write scripts in a language that is supported by the web browsers used by a majority of his or her users.</li>
+                            <li>Ideas of when to use client side scripts:</li>
+                                <ul>
+                                    <li>Complimentary form pre-processing</li>
+                                    <li>To get data about the user's screen or browser.</li>
+                                    <li>Online games.</li>
+                                    <li>Customizing the display</li>
+                                </ul>
+                            <li>Examples: JavaScript, VBScript</li>
+                        </ul>
+                        </div>
+                        <h1>Server-side Web Scripting</h1>
+                        <ul>
+                            <li>It refers to the technology in which the user's request runs a script, or a program, on the web server, generating customized web content that is sent to the client in a format understandable by the web browsers (usually HTML). </li>
+                            <li>Users are not able to display the source code of these scripts (the scripts are placed on the server), they can only display the customized HTML sent to the browser.</li>
+                            <li>Server-side scripts require their language's interpreter to be installed on the server, and produce the same output regardless of the client's browser, operating system, or other system details</li>
+                            <li>Server-side scripting â€“unlike client side scripting- has access to databases which makes it more flexible and secure.</li>
+                            <li>Examples: ASP, JSP, PHP, Perl</li>
+                        </ul>
+                        <br>
+                        <h2>Servlets</h2>
+                        <p>
+                            A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers. For such applications, Java Servlet technology defines HTTP-specific servlet classes.
+                        </p>
+                        <ul>
+                            <li>Packages that provide interfaces and classes for writing servlets:</li>
+                            <ul>
+                                <li>javax.servlet</li>
+                                <ul>
+                                    <li>Servlet, GenericServlet</li>
+                                    <li>ServletRequest, ServletResponse</li>
+                                    <li>ServletConfig, ServletContext</li>
+                                    <li>RequestDispatcher</li>
+                                </ul>
+                                <li>javax.servlet.http</li>
+                                <ul>
+                                    <li>HttpServlet</li>
+                                    <li>HttpServletRequest</li>
+                                    <li>HttpServletResponse</li>
+                                    <li>HttpSession</li>
+                                    <li>Cookie</li>
+                                </ul>
+                            </ul>
+                            <li>Servlet Processing</li>
+                            <ul>
+                                <li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container and servlet container checks if servlet is already loaded</li>
+                                <li>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its  init method.</li>
+                                <li>Servlet container invokes the servlet‟s service method, passing request and response objects as arguments</li>
+                                <li>Servlet processes the request using the response object to create the response, which is returned by the servlet container to  the web server, which in turn sends the response to the client</li>
+                                <li>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destroy method.</li>
+                            </ul>
+                            <li>Servlet Request Dispatching (RequestDispatcher)</li>
+                            <ul>
+                                <li>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</li>
+                                    <p>RequestDispatcher rqstDsp;<br>
+                                       rqstDsp = request.getRequestDispatcher(res);</p><br>
+                                <li>Include the dispatcher resource (or its output) in the current response; one or more resources can be included  (e.g. use for banners, footers, etc.)</li>
+                                    <p>rqstDsp.include(request, response);</p>
+                                <li>Forwards  the  processing  of  the  current  request  to  the  dispatcher  resource;  the  servlet  processing  the  current  request  must  not generate a response ( e.g. use in MVC “controller” servlets)</li>
+                                    <p>rqstDsp.forward(request, response);</p>
+                            </ul>
+                            <li>Session Tracking(HttpSession)</li>
+                            <ul>
+                                <li>Session tracking support is implemented either cookies or URL-rewriting</li>
+                                <li>Obtaining session object from the current request</li>
+                                    <p>HttpSession session; <br>
+                                    session = request.getSession(createNew);</p>
+                                <li>Obtaining session information (HttpSession</li>
+                                    <ul>
+                                        <li>getCreationTime()</li>
+                                        <li>getLastAccessedTime()</li>
+                                        <li>getMaxInactiveInternal()</li>
+                                        <li>getId()</li>
+                                        <li>isNew()</li>
+                                        <li>setMaxInactiveInterval(int val)</li>
+                                    </ul>
+                                <li>destroying sessions</li>
+                                <ul>
+                                    <li>invalidate()</li>
+                                </ul>
+                                <li>URL-rewriting(HttpServletResponse)</li>
+                                <ul>
+                                    <li>encodeURL(String url)</li>
+                                    <li>encodeRedirectURL(String url)</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                            <h2>Java Server Pages</h2>
+                                <p>Java Server Page (JSP) is a technology for controlling the content or appearance of Web pages through the use of servlets, small programs that are specified in the Web page and run on the Web server to modify the Web page before it is sent to the user who requested it. Sun Microsystems, the developer of Java, also refers to the JSP technology as the Servlet application program interface (API). JSP is comparable to Microsoft's Active Server Page (ASP) technology. Whereas a Java Server Page calls a Java program that is executed by the Web server, an Active Server Page contains a script that is interpreted by a script interpreter (such as VBScript or JScript) before the page is sent to the user.</p>
+                
+                
+                </div>
+            </div>
+    </body>
+</html>
