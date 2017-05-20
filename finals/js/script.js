@@ -42,6 +42,7 @@ $('.PRELIM').click(function () {
     $('.PRELIMS').fadeIn(400);
     $('.MIDTERMS').fadeOut(0);
     $('.FINALS').fadeOut(0);
+    
 })
 /* midterms */
 $('.MIDTERM').click(function () {
@@ -58,13 +59,7 @@ $('.FINAL').click(function () {
     $('.MIDTERMS').fadeOut(0);
     $('.FINALS').fadeIn(400);
 })
-$('.HELP').click(function () {
-    $('.main').addClass('hide');
-    $('.PRELIMS').fadeOut(0);
-    $('.MIDTERMS').fadeOut(0);
-    $('.FINALS').fadeOut(0);
-    $('.HELPS').fadeIn(400);
-})
+
 
 
 var x = document.getElementById("java-scripts");
@@ -99,4 +94,11 @@ function shownode() {
     } else {
         z.style.display = 'none';
     }
+}
+function showasp(){
+    var v = document.getElementById('owasp-scripts');
+    if(v.style.display == 'none'){
+        v.style.display = 'block';}
+    else{
+        v.style.display = 'none';}
 }
