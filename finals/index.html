@@ -873,7 +873,240 @@
                         </div>
                     </div>
                     <div id="node-scripts">
-                        asds
+                        <ul>
+                            <li>
+                                NODE.JS, often called simply "Node" in conversation, is a development platform built on top of Google's V8 JavaScript virtual machine. While JavaScript engines (including V8) are traditionally run in Web browsers to form the client side of a client/server application, the Node.js libraries are focused on building server-side applications in JavaScript.
+                            </li>
+                            <br>
+                            <li>
+                                Node.js is intended to run on a dedicated HTTP server and to employ a single thread with one process at a time. Node.js applications are events-based and run asynchronously. Code built on the Node platform does not follow the traditional model of receive, process, send, wait, receive. Instead, Node processes incoming requests in a constant event stack and sends small requests one after the other without waiting for responses.
+                            </li>
+                            <br>
+                            <li>
+                                One of the major advantages of Node.js, according to its creator Ryan Dahl, is that it does not block input/output (I/O). Some developers are highly critical of Node.js and point out that if a single process requires a significant number of CPU cycles, the application will block and that the blocking can crash the application. Proponents of the Node.js model claim that CPU processing time is less of a concern because of the high number of small processes that Node code is based on.
+                            </li>
+                        </ul>
+                         <h3>Server Module</h3>
+                             <ul>
+                                  <li>
+                                     It intercepts the request made by a client 
+                                    </li>
+                                    <br>
+                              <li>
+                                   TO run this in your computer open CMD and go to the directory folder and type
+                                   "node 'name.js'"
+                                    </li>
+                            </ul>
+                                <h3>Example Code</h3>
+                                <p>
+                                    var http = require('http');
+                                    var Server = http.createServer(handler);
+                                    Server.listen(81);
+                                    function handler (request,response){
+                                    response.end('hello node.js!!!');
+                                    }
+                                </p>
+                       <h3>Nodemon</h3>
+                             <ul>
+                                <li>
+                                    Nodemon is a utility that will monitor for any changes in your source and automatical restar
+                                    your server.  Perfect for development. Install it using npm.
+                                        </li>
+                                        
+                                    </ul>
+                                <h3>Features of Nodemon</h3>
+                                    <ul>
+                                        <li>Automatic restarting of Application.
+                                        </li>
+                                        <li>Detect Default file extension to monitor.
+                                        </li>
+                                        <li>Default support for node and coffescript, but east to run any executable.
+                                        </li>
+                                        <li>Ignoring specific files or directories.
+                                        </li>
+                                        <li>Watch specific directories
+                                        </li>
+                                        <li>Works with server application or one time run utilities and REPLs
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Install : "npm install -g nodemon"
+ 
+                                        </li>
+                                    </ul>
+                                    <h3>API</h3>
+                                        <h4>
+                                            readFile()
+                                        </h4>
+                                        <ul>
+                                            <li>Throws (boolean, default: true). If JSON.parse throws an error, pass this error to the callback. 
+                                                 If false, returns null for the object.
+                                            </li>
+                                        </ul>
+                                        <br>
+                                        <h4>Example Code</h4>
+                                            <p>
+                                                jsonfile.readFile(file, function(err, objt){</p>
+                                              <p>  console.dir(obj);   </p> 
+                                               <p>  }) </p>
+                                                <br>
+                                        <h4>readFileSync()</h4>
+                                            <ul>
+                                                <li>
+                                                    
+                                                     Throws (boolean, default: true). If an error is encountered reading or parsing the file, throw the error. 
+                                                     If false, returns null for the object.
+                                                </li>
+                                            </ul>
+                                            <br>
+                                            <h4>Example</h4>
+                                                <ul>
+                                                 <p>  var webfile = require ('webfile');</p>
+                                                  <p>  var file = '/tmp/data.json';</p>
+                                                  <p>  console.dir(webfile.readFileSync(file));</p>
+                                                </ul>
+                                                <br>
+                                            <h4>writeFile()</h4>
+                                            <ul>
+                                                <li>
+                                                    Asynchronously writes data to a file, replacing the file if it already exists. data can be a string or a buffer
+                                                </li>
+                                            </ul>
+                                            <br>
+                                            <h4> Example</h4>
+                                                <p>
+                                                    fs.writeFile('message.txt', 'Hello Node.js', (err) => { </p>
+                                                 <p>    if (err) throw err; </p>
+                                                  <p>  console.log('The file has been saved!');
+                                                    }); 
+                                                </p>
+                                            <h4>writeFileSync()</h4>
+                                                
+                                                <ul>
+                                                    <li>
+                                                        The synchronous version of fs.writeFile(). Returns undefined.
+                                                    </li>
+                                                </ul>
+                                                <br>
+                                            <h4>Example</h4>
+                                                <ul>
+                                                   <P>
+                                                       var jsonfile = require('jsonfile')</P>
+ 
+                                                    <p>   var file = '/tmp/data.json' </p>
+                                                    <p>   var obj = {name: 'JP'} </p>
+        
+                                                     <p>  jsonfile.writeFileSync(file, obj) 
+                                                    </p>
+                                                </ul>
+
+                                                <h3>Mysql in NODE JS</h3>
+                                                    <ul>
+                                                        <li>
+                                                            This allows the the application and the database to communicate to updating the tables
+                                                        </li>
+                                                        <br>
+                                                        <li>
+                                                            intall :'npm install mysql'
+                                                        </li>
+                                                    </ul>
+                                                <h4>Example</h4>
+                                                <br>
+                                                    <p>
+                                                        var mysql      = require('mysql');</p>
+                                                     <p>   var connection = mysql.createConnection({ </p>
+                                                     <p>    host     : 'localhost',</p>
+                                                     <p>   user     : 'me', </p>
+                                                     <p>    password : 'secret',</p>
+                                                     <p>    database : 'my_db'</p>
+                                                    <p>});</p>
+ 
+                                                    <p>connection.connect();</p>
+ 
+                                                    <p>connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {</p>
+                                                   <p> if (error) throw error;</p>
+                                                    <p>console.log('The solution is: ', results[0].solution);</p>
+                                                <p> });</p>
+ 
+                                                    <p> connection.end();
+                                                    </p>
+                                                    <br>
+                                                    <h3>Express.js</h3>
+                                                    <ul>
+                                                        <li>
+                                                            In Web Applications, Express is a minimal and flexible Node.js web application framework that 
+                                                         provides a robust set of features for web and mobile applications.APIs With a myriad of HTTP utility methods and middleware at your disposal, 
+                                                         creating a robust API is quick and easy.
+                                                        </li>
+                                                        <br>
+                                                        <li>
+                                                            install : 'npm install express'
+                                                        </li>
+                                                    </ul>
+                                                <h3>Text Editors for NODE JS</h3>
+                                                        
+                                                    <ul>
+                                                        <li>
+                                                        Codenvy "Factory" feature enables developers to create temporary IDE workspaces with full code, build, test, deploy, and collaboration functionality that can be shared with a URL. Multiple people can work in the same workspace making code reviews and teaching simpler and faster. And there's no limit to collaborators
+                                                            
+                                                        </li>
+
+                                                   
+                                                    <h4>Features of Codenvy</h4>
+                                                    <ul>
+                                                        <li>
+                                                            Workspace distribution across an elastic cluster with an embedded Docker Swarm
+                                                        </li>
+                                                        <li>
+                                                            Operational solutions for monitoring, scaling, upgrading and archiving workspaces.
+                                                        </li>
+                                                        <li>Team management, permissions and resource policy management tools
+                                                        </li>
+                                                        <li> User authentication, single-sign on, and LDAP
+                                                        </li>
+                                                        <li>Self-service user registration
+                                                        </li>
+                                                        <li>Factories - enables developers to create temporary IDE workspaces with full code, build, test, deploy, 
+          and collaboration functionality that can be shared with a URL. Multiple people can work in the same
+          workspace making code reviews and teaching simpler and faster.
+                                                        </li>
+                                                         </ul>
+                                                        <br>
+                                                        <li>
+                                                            Cloud 9 s an online integrated development environment, published as open source from version 3.0. It supports hundreds of programming languages, including C, C++, PHP, Ruby, Perl, Python, JavaScript with Node.js, and Go. It enables developers to get started with coding immediately with pre-configured workspaces, collaborate with their peers with collaborative coding features, and web development features like live preview and browser compatibility testing.
+                                                        </li>
+                                                        <h4>Features of Cloud 9</h4>
+                                                        <ul>
+                                                            <li>Run any powerful command on your Ubuntu workspace or on your own VM.
+                                                                Do a git push, compile your app, or tail server output - the Terminal 
+                                                             enables any development stack.
+                                                             </li>
+                                                            <li>
+                                                             Code Completion helps you to type faster and to avoid miss spell code or words.   
+                                                            </li>
+                                                            <li>
+                                                               Debugger enables you to set breakpoints, step over and through, and inspect variables of any JS/Node.js app. 
+                                                            </li>
+                                                            <li>
+                                                              Outline view helps to under stand your code .  
+                                                            </li>
+                                                           </ul>
+                                                           <br>
+                                                           <li>
+                                                               Sublime Text has been my IDE of preference for the past year or so after tiring of Eclipse: there is little of the feature set of a heavyweight IDE like Eclipse that I actually use on a regular basis nowadays. I like to have basic forms of code navigation, such as search and definition lookup, syntax highlighting, automatic linting, a bare minimum of code completion, and a few formatting helpers such as whitespace management, but beyond that I don't even tend to integrate version control into my development environment. I prefer to manage Git from the command line, for example, and keep that distinct from the IDE
+                                                           </li>
+                                                            <h4>Features of Sublime Text 3</h4>
+                                                            <li>
+                                                              Multiple Selections- allows you to change lines of code at once  
+                                                            </li>
+                                                            <li>
+                                                             Command Palette -  holds infrequently used functionality, like sorting, changing the syntax and changing the indentation settings.   
+                                                            </li>
+                                                            <li>
+                                                              Plugin API - Python based plugin API. Along with the API, it comes with a built in Python console to interactively experiment in real time.
+  
+                                                            </li>
+                                                    </ul>
                     </div>
                 </div>
         </div>
