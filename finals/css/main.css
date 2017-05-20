@@ -78,11 +78,6 @@ hr {
 
 ol {
     display: inline-block;
-    -webkit-column-count: 2;
-    -o-column-count: 2;
-    -ms-column-count: 2;
-    -moz-column-count: 2; 
-    column-count: 2;
 }
 
 
@@ -553,7 +548,7 @@ h1 {
 }
 
 .FINALS p.link {
-    text-align: center;
+    margin-left: 18%;
     font-size: 30px;
 }
 
@@ -585,4 +580,33 @@ nav {
 
 #node-scripts {
     display: none;
+}
+
+.info {
+    margin-left: 40px;
+}
+
+pre {
+    display: inline;
+}
+
+#owasp-scripts ul li {
+    list-style: none;
+}
+
+.define {
+    padding: 10px;
+}
+
+#owasp-scripts {
+    display: none;
+}
+
+.centre {
+    font-size: 40px;
+    text-align: center;
+}
+
+.FINAL:hover {
+    color: chartreuse;
 }
