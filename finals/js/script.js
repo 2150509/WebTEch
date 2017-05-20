@@ -65,12 +65,13 @@ $('.FINAL').click(function () {
 var x = document.getElementById("java-scripts");
 var y = document.getElementById("php-scripts")
 var z = document.getElementById("node-scripts");
-
+var v = document.getElementById('owasp-scripts');
 function showjava() {
     if (x.style.display == 'none') {
         x.style.display = 'block';
         y.style.display = 'none';
         z.style.display = 'none';
+        v.style.display = 'none';
     } else {
         x.style.display = 'none';
     }
@@ -81,6 +82,7 @@ function showphp() {
         y.style.display = 'block';
         x.style.display = 'none';
         z.style.display = 'none';
+        v.style.display = 'none';
     } else {
         y.style.display = 'none';
     }
@@ -91,6 +93,7 @@ function shownode() {
         y.style.display = 'none';
         x.style.display = 'none';
         z.style.display = 'block';
+        v.style.display = 'none';
     } else {
         z.style.display = 'none';
     }
@@ -98,6 +101,9 @@ function shownode() {
 function showasp(){
     var v = document.getElementById('owasp-scripts');
     if(v.style.display == 'none'){
+         y.style.display = 'none';
+        x.style.display = 'none';
+        z.style.display = 'none';
         v.style.display = 'block';}
     else{
         v.style.display = 'none';}

@@ -163,9 +163,7 @@ button:hover {
     
 }
 
-img {
-    width: 35%;
-}
+
 
 h2:hover {
     cursor: pointer;
@@ -557,7 +555,6 @@ h1 {
 nav {
     text-align: center;
     font-size: 50px;
-    padding-right: 10px;
 }
 
 .FINALS nav a {
@@ -609,4 +606,14 @@ pre {
 
 .FINAL:hover {
     color: chartreuse;
+}
+
+.new {
+    height: 50px;
+    width: 50px;
+}
+
+.new1 {
+    height: 50px;
+    width: 100px;
 }
